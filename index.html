@@ -1,1 +1,207 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Top Section -->
+    <header class="top-section">
+      <div class="avatar-container">
+        <div class="avatar"></div>
+        <div class="indicators">
+          <div class="indicator mind">Mind</div>
+          <div class="indicator body">Body</div>
+          <div class="indicator soul">Soul</div>
+          <div class="indicator bank">Bank</div>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-item">
+          <h3>Time Spent</h3>
+          <div class="progress-circle">70%</div>
+        </div>
+        <div class="progress-item">
+          <h3>Tasks Completed</h3>
+          <div class="progress-circle">50%</div>
+        </div>
+      </div>
+    </header>
+    <!-- Social Media Feed -->
+    <main class="feed">
+      <div class="post">
+        <div class="post-header">
+          <img src="https://via.placeholder.com/50" alt="User" class="post-avatar">
+          <span class="post-username">username</span>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Post" class="post-image">
+        <div class="post-actions">
+          <button class="like-btn">❤️ Like</button>
+          <button class="comment-btn">💬 Comment</button>
+          <button class="share-btn">🔗 Share</button>
+        </div>
+        <p class="post-caption"><strong>username</strong> Caption text goes here...</p>
+        <span class="post-comments">View all 10 comments</span>
+      </div>
+      <!-- Add more posts here -->
+    </main>
+    <!-- Floating Task Bar -->
+    <nav class="floating-bar">
+      <button class="task-btn mind">Mind</button>
+      <button class="task-btn body">Body</button>
+      <button class="task-btn soul">Soul</button>
+      <button class="task-btn bank">Bank</button>
+    </nav>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+/* General Styles /
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f8ff, #e0ffe0);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/ Top Section /
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.avatar-container {
+  position: relative;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 100%;
+}
+.indicator {
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+/ Progress Tracker /
+.progress {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0;
+}
+.progress-item {
+  text-align: center;
+}
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  background: conic-gradient(#6a85b6 70%, #e0e0e0 70%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/ Feed /
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+.post {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.post-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.post-username {
+  font-weight: bold;
+}
+.post-image {
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+.post-actions {
+  display: flex;
+  gap: 15px;
+}
+.post-caption {
+  margin: 10px 0;
+}
+.post-comments {
+  color: gray;
+  font-size: 14px;
+}
+/ Floating Bar */
+.floating-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.task-btn {
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.task-btn:hover {
+  transform: scale(1.1);
+  background: #6a85b6;
+}
+// Placeholder for interactivity
+document.querySelectorAll('.like-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Post liked!');
+  });
+});
