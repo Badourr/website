@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="dashboard">
-    <!-- Top Section -->
-    <header class="top-section">
-      <div class="avatar-container">
-        <div class="avatar"></div>
-        <div class="indicators">
-          <div class="indicator mind">Mind</div>
-          <div class="indicator body">Body</div>
-          <div class="indicator soul">Soul</div>
-          <div class="indicator bank">Bank</div>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-item">
-          <h3>Time Spent</h3>
-          <div class="progress-circle">70%</div>
-        </div>
-        <div class="progress-item">
-          <h3>Tasks Completed</h3>
-          <div class="progress-circle">50%</div>
-        </div>
-      </div>
-    </header>
-    <!-- Social Media Feed -->
-    <main class="feed">
-      <div class="post">
-        <div class="post-header">
-          <img src="https://via.placeholder.com/50" alt="User" class="post-avatar">
-          <span class="post-username">username</span>
-        </div>
-        <img src="https://via.placeholder.com/400" alt="Post" class="post-image">
-        <div class="post-actions">
-          <button class="like-btn">❤️ Like</button>
-          <button class="comment-btn">💬 Comment</button>
-          <button class="share-btn">🔗 Share</button>
-        </div>
-        <p class="post-caption"><strong>username</strong> Caption text goes here...</p>
-        <span class="post-comments">View all 10 comments</span>
-      </div>
-      <!-- Add more posts here -->
-    </main>
-    <!-- Floating Task Bar -->
-    <nav class="floating-bar">
-      <button class="task-btn mind">Mind</button>
-      <button class="task-btn body">Body</button>
-      <button class="task-btn soul">Soul</button>
-      <button class="task-btn bank">Bank</button>
-    </nav>
-  </div>
-  <script src="script.js"></script>
+    <div class="dashboard">
+        <header class="top-section">
+            <div class="avatar-container">
+                <div class="avatar"></div>
+                <div class="indicators">
+                    <div class="indicator">Mind</div>
+                    <div class="indicator">Body</div>
+                    <div class="indicator">Soul</div>
+                    <div class="indicator">Bank</div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-item">
+                    <h3>Time Spent</h3>
+                    <div class="progress-circle" style="--progress: 70%">
+                        <span>70%</span>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <h3>Tasks Completed</h3>
+                    <div class="progress-circle" style="--progress: 50%">
+                        <span>50%</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="feed">
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User avatar" class="post-avatar">
+                    <span class="post-username">username</span>
+                </div>
+                <img src="https://via.placeholder.com/800x400" alt="Post content" class="post-image">
+                <div class="post-actions">
+                    <button class="like-btn">❤️ Like</button>
+                    <button class="comment-btn">💬 Comment</button>
+                    <button class="share-btn">🔗 Share</button>
+                </div>
+                <p class="post-caption"><strong>username</strong> Caption text goes here...</p>
+                <span class="post-comments">View all 10 comments</span>
+            </div>
+        </main>
+
+        <nav class="floating-bar">
+            <button class="task-btn">Mind</button>
+            <button class="task-btn">Body</button>
+            <button class="task-btn">Soul</button>
+            <button class="task-btn">Bank</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
