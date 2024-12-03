@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -93,7 +94,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     color: white;
-    background: conic-gradient(#6a85b6 var(--progress), #e0e0e0 var(--progress));
+    background: conic-gradient(#6a85b6 var(--progress, 50%), #e0e0e0 var(--progress, 50%));
     position: relative;
 }
 
@@ -214,6 +215,7 @@ body {
     background: linear-gradient(135deg, #5a75a6, #9ab8e0);
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
     .progress {
         flex-direction: column;
