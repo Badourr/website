@@ -4,7 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Floating bar styling */
+        .floating-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            z-index: 1000;
+        }
+
+        .task-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 15px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Dashboard styling */
+        .dashboard {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .avatar-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .indicators {
+            display: flex;
+            gap: 15px;
+        }
+
+        .indicator {
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .progress {
+            display: flex;
+            gap: 20px;
+        }
+
+        .progress-item {
+            text-align: center;
+        }
+
+        .progress-circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4caf50 calc(var(--progress) * 1%),
+                #ddd calc(var(--progress) * 1%)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .progress-circle span {
+            position: absolute;
+        }
+
+        .feed {
+            margin-top: 20px;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .post-avatar {
+            border-radius: 50%;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .post-caption {
+            padding: 0 10px;
+        }
+
+        .post-comments {
+            display: block;
+            padding: 0 10px 10px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
     <div class="dashboard">
@@ -58,7 +194,5 @@
             <button class="task-btn">Bank</button>
         </nav>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
